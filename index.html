@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Inventory Management System</title>
+    <title>School Inventory Management System - Indian Educational Solutions</title>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Added Indian font Tiro Devanagari -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,18 +14,34 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
         /* Hero section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--primary) 100%);
             color: white;
             padding: 6rem 0;
             margin-bottom: 4rem;
             position: relative;
             overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('img/background_pattern.svg');
+            background-size: 300px;
+            opacity: 0.1;
+            z-index: 1;
         }
         
         .hero-content {
@@ -36,6 +52,12 @@
         .hero-image {
             position: relative;
             z-index: 2;
+        }
+        
+        .hindi-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
         .hero-bg-circle {
@@ -70,11 +92,26 @@
             border: none;
             border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+            background-color: #fff;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-blue), var(--accent-green));
+            z-index: 2;
         }
         
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
         
         .feature-card-body {
@@ -82,16 +119,36 @@
         }
         
         .cta-section {
-            background-color: var(--gray-100);
+            background-color: #f8f9fa;
+            background-image: url('img/background_pattern.svg');
+            background-size: 200px;
+            background-attachment: fixed;
             padding: 5rem 0;
             margin: 5rem 0;
             position: relative;
             overflow: hidden;
         }
         
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
         .cta-decoration {
             position: absolute;
-            opacity: 0.1;
+            opacity: 0.8;
+            z-index: 2;
         }
         
         .decoration-1 {
@@ -108,6 +165,7 @@
         
         .testimonial-section {
             padding: 5rem 0;
+            background: linear-gradient(to bottom, white, #f8f9fa);
         }
         
         .testimonial-card {
@@ -117,6 +175,13 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             height: 100%;
             position: relative;
+            border-left: 4px solid var(--accent-orange);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         
         .testimonial-card::before {
@@ -132,11 +197,13 @@
         }
         
         .avatar {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
             margin-right: 1rem;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
         .testimonial-author {
@@ -174,7 +241,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 1rem;
         }
@@ -224,11 +291,22 @@
             transition: all 0.3s ease;
             height: 100%;
             overflow: hidden;
+            position: relative;
         }
         
         .login-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-green));
         }
         
         .login-card-header {
@@ -247,14 +325,103 @@
             padding: 2rem;
             text-align: center;
         }
+        
+        /* Additional styles for Indian-themed elements */
+        .india-flag-colors {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .color-saffron {
+            background-color: var(--accent-orange);
+        }
+        
+        .color-white {
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+        
+        .color-green {
+            background-color: var(--accent-green);
+        }
+        
+        .stats-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .stats-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .stats-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+        
+        .counter-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-family: var(--font-family-sans-serif);
+        }
+        
+        .counter-label {
+            font-size: 1rem;
+            color: var(--gray-600);
+        }
+        
+        .footer {
+            background-color: var(--gray-800);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer a {
+            color: white;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" alt="School Inventory" height="40">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="School Inventory" height="40" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -285,8 +452,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
-                    <h1 class="display-4 fw-bold mb-4">School Inventory Management Made Simple</h1>
-                    <p class="lead mb-4">Effortlessly manage school supplies, track inventory, and process parent orders - all in one place.</p>
+                    <p class="hindi-text mb-2">विद्यालय प्रबंधन सरल बनाएँ</p>
+                    <h1 class="display-4 fw-bold mb-4">Revolutionizing School Supply Management Across India</h1>
+                    <p class="lead mb-4">From Delhi to Chennai, Mumbai to Kolkata - empowering schools to efficiently manage supplies while providing parents with a seamless way to order educational materials.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <a href="school_login.php" class="btn btn-light btn-lg px-4 me-md-2">School Login</a>
                         <a href="parent_login.php" class="btn btn-outline-light btn-lg px-4">Parent Portal</a>
@@ -304,7 +472,7 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Choose Your Login Portal</h2>
-                <p class="lead">Access the system based on your role</p>
+                <p class="lead">Access your dashboard based on your role</p>
             </div>
             
             <div class="row g-4">
@@ -315,10 +483,10 @@
                                 <i class="fas fa-user-friends"></i>
                             </div>
                             <h3>Parent Portal</h3>
-                            <p class="mb-0">Order school supplies for your child</p>
+                            <p class="mb-0">Order school supplies for your child with ease</p>
                         </div>
                         <div class="login-card-body">
-                            <p>Access the parent portal to order books, uniforms, and other school supplies for your child.</p>
+                            <p>Access the parent portal to browse and order books, uniforms, and educational materials for your child's academic needs.</p>
                             <a href="parent_login.php" class="btn btn-primary btn-lg">Parent Login</a>
                             <p class="mt-3 mb-0 small">New parent? <a href="parent_register.php">Register here</a></p>
                         </div>
@@ -332,12 +500,12 @@
                                 <i class="fas fa-school"></i>
                             </div>
                             <h3>School Dashboard</h3>
-                            <p class="mb-0">Manage inventory and orders</p>
+                            <p class="mb-0">Comprehensive inventory management solution</p>
                         </div>
                         <div class="login-card-body">
-                            <p>School administrators can manage inventory, track stock levels, and process parent orders.</p>
+                            <p>School administrators can manage inventory, track stock levels, and efficiently process parent orders through an integrated system.</p>
                             <a href="school_login.php" class="btn btn-primary btn-lg">School Login</a>
-                            <p class="mt-3 mb-0 small">Need help? <a href="contact.php">Contact support</a></p>
+                            <p class="mt-3 mb-0 small">Need to register your school? <a href="school_register.php">Register here</a></p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +517,7 @@
     <section class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Key Features</h2>
-            <p class="lead">Discover how our system simplifies school inventory management</p>
+            <p class="lead">Discover how our system transforms school inventory management</p>
         </div>
         
         <div class="row g-4">
@@ -359,8 +527,8 @@
                         <div class="features-icon">
                             <i class="fas fa-box-open"></i>
                         </div>
-                        <h3>Inventory Tracking</h3>
-                        <p>Keep track of all school supplies including books, uniforms, and stationery with real-time updates on stock levels.</p>
+                        <h3>Smart Inventory Tracking</h3>
+                        <p>Manage everything from NCERT textbooks to uniforms and stationery with real-time updates on stock levels and low inventory alerts.</p>
                     </div>
                 </div>
             </div>
@@ -371,8 +539,8 @@
                         <div class="features-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <h3>Easy Ordering</h3>
-                        <p>Parents can easily browse available items and place orders for their children's school supplies through a user-friendly interface.</p>
+                        <h3>Seamless Ordering</h3>
+                        <p>Parents can easily browse available items, add them to cart, and place orders for their children with simple payment integration and order tracking.</p>
                     </div>
                 </div>
             </div>
@@ -383,8 +551,8 @@
                         <div class="features-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Analytics &amp; Reports</h3>
-                        <p>Generate comprehensive reports on inventory levels, order history, and popular items to make informed decisions.</p>
+                        <h3>Advanced Analytics</h3>
+                        <p>Generate comprehensive reports on inventory, sales trends, and popular items to make informed decisions about procurement and pricing.</p>
                     </div>
                 </div>
             </div>
@@ -396,41 +564,54 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="slideshow-container">
-                    <div class="slideshow-slide active" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                    <div class="slideshow-slide active">
+                        <img src="img/school_illustration.svg" alt="Digital School Management" class="img-fluid">
                         <div class="slideshow-caption">
-                            <h4>Modern Inventory Management</h4>
-                            <p>Streamline school supply operations with our digital solution</p>
+                            <h4>Digital School Management</h4>
+                            <p>Embracing education technology across Indian schools</p>
                         </div>
                     </div>
-                    <div class="slideshow-slide" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                    <div class="slideshow-slide">
+                        <img src="img/parent_child.svg" alt="Parent-Friendly Ordering" class="img-fluid">
                         <div class="slideshow-caption">
                             <h4>Parent-Friendly Ordering</h4>
-                            <p>Simple interface for parents to order supplies for their children</p>
+                            <p>Simple interface for parents of all technology backgrounds</p>
                         </div>
                     </div>
-                    <div class="slideshow-slide" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                    <div class="slideshow-slide">
+                        <img src="img/inventory.svg" alt="Efficient School Operations" class="img-fluid">
                         <div class="slideshow-caption">
                             <h4>Efficient School Operations</h4>
-                            <p>Reduce administrative burden with automated inventory tracking</p>
+                            <p>Reduce administrative work and focus on education</p>
+                        </div>
+                    </div>
+                    <div class="slideshow-slide">
+                        <img src="img/carousel_fourth.svg" alt="Complete Education Ecosystem" class="img-fluid">
+                        <div class="slideshow-caption">
+                            <h4>Interactive Learning Environment</h4>
+                            <p>Supporting the needs of modern Indian education</p>
                         </div>
                     </div>
                     <div class="slideshow-dots">
                         <div class="slideshow-dot active" data-slide="0"></div>
                         <div class="slideshow-dot" data-slide="1"></div>
                         <div class="slideshow-dot" data-slide="2"></div>
+                        <div class="slideshow-dot" data-slide="3"></div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <h2 class="fw-bold mb-4">Streamline Your School Supply Management</h2>
-                <p class="lead">Our inventory management system helps schools efficiently manage their supply chain while making it easy for parents to order what their children need.</p>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Reduced administrative workload for school staff</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Transparent ordering process for parents</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Minimized overstock and stockout situations</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Comprehensive reporting and analytics</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> User-friendly interface for all stakeholders</li>
-                </ul>
+                <h2 class="fw-bold mb-4">Transforming School Supply Management</h2>
+                <p class="lead">Our inventory management system helps schools across India efficiently manage their supply chain while providing parents with a seamless experience.</p>
+                <div class="india-border-container mt-4 p-3">
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Reduced workload for administrative staff by up to 60%</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Transparent ordering process for parents of all technical abilities</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Real-time inventory tracking to prevent stockouts during critical exam periods</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Comprehensive analytics with INR-based financial reporting</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Mobile-responsive design for access from any device</li>
+                    </ul>
+                </div>
                 <a href="about.php" class="btn btn-primary mt-3">Learn More About Us</a>
             </div>
         </div>
@@ -445,13 +626,14 @@
             <img src="img/inventory.svg" alt="Inventory" width="150" class="svg-animate">
         </div>
         <div class="container">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center cta-content">
                 <div class="col-md-8">
-                    <h2 class="fw-bold mb-4">Ready to Simplify School Inventory Management?</h2>
-                    <p class="lead mb-4">Join schools across the country in streamlining their inventory process and improving parent satisfaction.</p>
+                    <p class="hindi-text mb-2">आज ही हमसे जुड़ें</p>
+                    <h2 class="fw-bold mb-4">Ready to Simplify Your School Inventory Management?</h2>
+                    <p class="lead mb-4">Join schools across India in streamlining their inventory process and enhancing parent satisfaction with our all-in-one solution.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <a href="school_login.php" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
-                        <a href="contact.php" class="btn btn-outline-primary btn-lg px-4">Contact Us</a>
+                        <a href="school_register.php" class="btn btn-primary btn-lg px-4 me-md-2">Register Your School</a>
+                        <a href="contact.php" class="btn btn-outline-primary btn-lg px-4">Request Demo</a>
                     </div>
                 </div>
             </div>
@@ -463,18 +645,18 @@
             <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">What Our Users Say</h2>
-                <p class="lead">Feedback from schools and parents using our system</p>
+                <p class="lead">Hear from schools and parents across India using our system</p>
             </div>
             
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-card">
-                        <p>"This system has transformed how we manage our school supplies. The inventory tracking is precise, and we've reduced waste by over 30%."</p>
+                        <p>"SchoolSamridhi has transformed how we manage our inventory at DPS Noida. The system has reduced our administrative work by half and improved accuracy significantly."</p>
                         <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Priya Sharma" class="avatar">
                             <div>
-                                <h5 class="mb-0">Sarah Johnson</h5>
-                                <p class="mb-0 text-muted">School Administrator</p>
+                                <h5 class="mb-0">Dr. Priya Sharma</h5>
+                                <p class="mb-0 text-muted">Principal, Delhi Public School</p>
                             </div>
                         </div>
                     </div>
@@ -482,12 +664,12 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-card">
-                        <p>"As a parent, I love how easy it is to order school supplies for my children. The interface is intuitive, and delivery is always prompt."</p>
+                        <p>"As a busy working parent, I appreciate how easy it is to order school supplies for my children. The interface is intuitive, and the delivery is always on time."</p>
                         <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Patel" class="avatar">
                             <div>
-                                <h5 class="mb-0">Michael Chen</h5>
-                                <p class="mb-0 text-muted">Parent</p>
+                                <h5 class="mb-0">Rajesh Patel</h5>
+                                <p class="mb-0 text-muted">Parent, Mumbai</p>
                             </div>
                         </div>
                     </div>
@@ -495,12 +677,12 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-card">
-                        <p>"The analytics have given us valuable insights into our inventory needs. We've optimized our purchasing and saved on storage costs."</p>
+                        <p>"The analytics have given us valuable insights into purchasing patterns. We've optimized our inventory and saved over ₹2 lakh in excess stock costs this year alone."</p>
                         <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Sharma" class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lakshmi Krishnan" class="avatar">
                             <div>
-                                <h5 class="mb-0">Priya Sharma</h5>
-                                <p class="mb-0 text-muted">School Principal</p>
+                                <h5 class="mb-0">Lakshmi Krishnan</h5>
+                                <p class="mb-0 text-muted">Admin, Chennai International School</p>
                             </div>
                             </div>
                         </div>
@@ -510,37 +692,61 @@
         </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer">
         <div class="container py-4">
             <div class="row gy-4">
-                <div class="col-md-4 text-md-start">
-                    <img src="img/logo.svg" alt="School Inventory" height="40" class="mb-3">
-                    <p class="mb-0">Simplifying inventory management for schools and parents since 2023.</p>
+                <div class="col-lg-4 col-md-6 text-md-start">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/logo.svg" alt="School Inventory" height="40" class="me-2">
+                        <span class="fs-4 fw-bold text-white">SchoolSamridhi</span>
+                    </div>
+                    <p class="mb-3">Empowering educational institutions across India with modern inventory management solutions since 2023.</p>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="parent_login.php">Parent Login</a></li>
-                        <li><a href="school_login.php">School Login</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
+                        <li class="mb-2"><a href="index.html"><i class="fas fa-chevron-right me-1"></i> Home</a></li>
+                        <li class="mb-2"><a href="parent_login.php"><i class="fas fa-chevron-right me-1"></i> Parent Login</a></li>
+                        <li class="mb-2"><a href="school_login.php"><i class="fas fa-chevron-right me-1"></i> School Login</a></li>
+                        <li class="mb-2"><a href="about.php"><i class="fas fa-chevron-right me-1"></i> About Us</a></li>
+                        <li class="mb-2"><a href="contact.php"><i class="fas fa-chevron-right me-1"></i> Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 text-md-end">
-                    <h5>Contact</h5>
-                    <p class="mb-0">Email: support@schoolinventory.com</p>
-                    <p class="mb-0">Phone: +91-123-456-7890</p>
-                    <div class="mt-3">
-                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#"><i class="fas fa-chevron-right me-1"></i> Inventory Management</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-chevron-right me-1"></i> Parent Ordering Portal</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-chevron-right me-1"></i> Analytics & Reporting</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-chevron-right me-1"></i> School Resources</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-chevron-right me-1"></i> Supply Chain Management</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Cyber City, Gurugram 122002</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91-120-4567890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@schoolsamridhi.com</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Monday - Friday: 9:00 AM - 6:00 PM</li>
+                    </ul>
                 </div>
             </div>
             <hr class="my-4" style="background-color: rgba(255,255,255,0.2);">
-            <p class="mb-0">© 2025 School Inventory Management System | All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 SchoolSamridhi | All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> in India</p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -551,8 +757,12 @@
     <script src="js/main.js"></script>
     
     <script>
-        // Slideshow functionality
+        // Initialize counters
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize counters
+            initCounters();
+            
+            // Slideshow functionality
             const slides = document.querySelectorAll('.slideshow-slide');
             const dots = document.querySelectorAll('.slideshow-dot');
             let currentSlide = 0;
@@ -584,6 +794,9 @@
                     slideInterval = setInterval(nextSlide, 5000);
                 });
             });
+            
+            // Initialize festival notifications
+            initFestivalNotifications();
         });
     </script>
 </body>

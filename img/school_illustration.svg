@@ -1,137 +1,261 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
-  <!-- Background -->
-  <rect x="0" y="0" width="500" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a7d9ff" />
+      <stop offset="100%" stop-color="#e0f2ff" />
+    </linearGradient>
+    
+    <!-- Pattern for traditional Indian decorative elements -->
+    <pattern id="indianPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M10,0 L20,10 L10,20 L0,10 Z" fill="none" stroke="#FF9933" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="10" cy="10" r="3" fill="none" stroke="#138808" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect x="0" y="0" width="800" height="400" fill="url(#skyGradient)"/>
   
   <!-- Ground -->
-  <rect x="0" y="250" width="500" height="50" fill="#e9ecef" rx="0" ry="0"/>
-  <path d="M0,250 C100,240 200,260 300,245 C400,230 500,250 500,250 L500,300 L0,300 Z" fill="#dee2e6"/>
+  <rect x="0" y="400" width="800" height="200" fill="#e6f2d9"/>
   
-  <!-- Sky with subtle clouds -->
-  <circle cx="100" cy="80" r="30" fill="#e9ecef" opacity="0.5"/>
-  <circle cx="80" cy="80" r="25" fill="#e9ecef" opacity="0.5"/>
-  <circle cx="120" cy="80" r="25" fill="#e9ecef" opacity="0.5"/>
-  
-  <circle cx="400" cy="50" r="20" fill="#e9ecef" opacity="0.5"/>
-  <circle cx="385" cy="50" r="15" fill="#e9ecef" opacity="0.5"/>
-  <circle cx="415" cy="50" r="15" fill="#e9ecef" opacity="0.5"/>
-  
-  <!-- School Building -->
-  <g id="school_building">
-    <!-- Main building -->
-    <rect x="150" y="100" width="200" height="150" fill="#ffffff" stroke="#6c757d" stroke-width="2"/>
-    <rect x="140" y="90" width="220" height="20" fill="#198754" stroke="#156a43" stroke-width="2"/>
+  <!-- Traditional Indian School Building with Red Dome -->
+  <g transform="translate(400, 250)">
+    <!-- Main building - center structure -->
+    <rect x="-150" y="0" width="300" height="180" fill="#f5f1e9" stroke="#d9d2c5" stroke-width="2"/>
     
-    <!-- Roof -->
-    <polygon points="130,90 250,50 370,90" fill="#198754" stroke="#156a43" stroke-width="2"/>
+    <!-- Domed central part -->
+    <g>
+      <!-- Dome base -->
+      <rect x="-70" y="-50" width="140" height="50" fill="#f5f1e9" stroke="#d9d2c5" stroke-width="2"/>
+      
+      <!-- Main red dome -->
+      <ellipse cx="0" cy="-50" rx="70" ry="30" fill="#d93025"/>
+      <path d="M-70,-50 Q0,-100 70,-50" fill="#d93025" stroke="#a52a2a" stroke-width="1"/>
+      
+      <!-- Golden spire -->
+      <line x1="0" y1="-100" x2="0" y2="-130" stroke="#ffd700" stroke-width="3"/>
+      <circle cx="0" cy="-130" r="5" fill="#ffd700"/>
+    </g>
     
-    <!-- School sign -->
-    <rect x="220" y="70" width="60" height="15" fill="#ffffff" stroke="#6c757d" stroke-width="1"/>
-    <text x="250" y="82" font-family="'Poppins', sans-serif" font-size="10" text-anchor="middle" fill="#198754">SCHOOL</text>
+    <!-- Central entrance archway -->
+    <path d="M-30,120 L-30,180 L30,180 L30,120 Q0,90 -30,120 Z" fill="#a52a2a"/>
+    <rect x="-20" y="140" width="40" height="40" fill="#8b4513"/>
     
-    <!-- Door -->
-    <rect x="230" y="180" width="40" height="70" fill="#6c757d" stroke="#495057" stroke-width="1"/>
-    <rect x="245" y="180" width="10" height="70" fill="#495057"/>
-    <circle cx="240" cy="215" r="3" fill="#ffc107"/> <!-- Door knob -->
+    <!-- Windows and architectural details -->
+    <g>
+      <!-- Left side windows -->
+      <rect x="-130" y="30" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+      <rect x="-130" y="90" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+      
+      <!-- Right side windows -->
+      <rect x="100" y="30" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+      <rect x="100" y="90" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+      
+      <!-- Central windows under dome -->
+      <rect x="-40" y="20" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+      <rect x="10" y="20" width="30" height="40" rx="15" ry="20" fill="#87CEEB"/>
+    </g>
     
-    <!-- Steps -->
-    <rect x="220" y="250" width="60" height="5" fill="#adb5bd"/>
-    <rect x="225" y="255" width="50" height="5" fill="#adb5bd"/>
-    <rect x="230" y="260" width="40" height="5" fill="#adb5bd"/>
+    <!-- Decorative elements -->
+    <rect x="-150" y="0" width="300" height="10" fill="url(#indianPattern)"/>
+    <rect x="-150" y="170" width="300" height="10" fill="url(#indianPattern)"/>
     
-    <!-- Windows (Left side) -->
-    <rect x="170" y="120" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
-    <line x1="185" y1="120" x2="185" y2="150" stroke="#6c757d" stroke-width="1"/>
-    <line x1="170" y1="135" x2="200" y2="135" stroke="#6c757d" stroke-width="1"/>
+    <!-- Side wings -->
+    <rect x="-250" y="40" width="100" height="140" fill="#f5f1e9" stroke="#d9d2c5" stroke-width="2"/>
+    <rect x="150" y="40" width="100" height="140" fill="#f5f1e9" stroke="#d9d2c5" stroke-width="2"/>
     
-    <rect x="170" y="170" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
-    <line x1="185" y1="170" x2="185" y2="200" stroke="#6c757d" stroke-width="1"/>
-    <line x1="170" y1="185" x2="200" y2="185" stroke="#6c757d" stroke-width="1"/>
+    <!-- Side wing windows -->
+    <rect x="-230" y="60" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="-230" y="110" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="-190" y="60" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="-190" y="110" width="25" height="35" rx="2" fill="#87CEEB"/>
     
-    <!-- Windows (Right side) -->
-    <rect x="300" y="120" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
-    <line x1="315" y1="120" x2="315" y2="150" stroke="#6c757d" stroke-width="1"/>
-    <line x1="300" y1="135" x2="330" y2="135" stroke="#6c757d" stroke-width="1"/>
+    <rect x="205" y="60" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="205" y="110" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="165" y="60" width="25" height="35" rx="2" fill="#87CEEB"/>
+    <rect x="165" y="110" width="25" height="35" rx="2" fill="#87CEEB"/>
     
-    <rect x="300" y="170" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
-    <line x1="315" y1="170" x2="315" y2="200" stroke="#6c757d" stroke-width="1"/>
-    <line x1="300" y1="185" x2="330" y2="185" stroke="#6c757d" stroke-width="1"/>
-    
-    <!-- Flag pole -->
-    <line x1="370" y1="50" x2="370" y2="120" stroke="#495057" stroke-width="1.5"/>
-    <rect x="370" y="50" width="20" height="15" fill="#dc3545"/>
+    <!-- Building steps -->
+    <rect x="-100" y="180" width="200" height="10" fill="#d9d2c5"/>
+    <rect x="-90" y="190" width="180" height="10" fill="#d9d2c5"/>
+    <rect x="-80" y="200" width="160" height="10" fill="#d9d2c5"/>
   </g>
   
-  <!-- Trees -->
-  <g id="tree1" transform="translate(80, 180)">
-    <rect x="-5" y="0" width="10" height="70" fill="#6c757d"/>
-    <circle cx="0" cy="-15" r="25" fill="#198754"/>
-    <circle cx="15" cy="-5" r="20" fill="#198754"/>
-    <circle cx="-15" cy="-5" r="20" fill="#198754"/>
-    <circle cx="0" cy="0" r="20" fill="#198754"/>
+  <!-- Indian Flag on pole -->
+  <g transform="translate(600, 200)">
+    <rect x="-2" y="0" width="4" height="200" fill="#8b4513"/>
+    <rect x="2" y="10" width="45" height="30" fill="#FF9933"/>
+    <rect x="2" y="40" width="45" height="30" fill="#FFFFFF"/>
+    <rect x="2" y="70" width="45" height="30" fill="#138808"/>
+    <circle cx="24.5" cy="55" r="8" fill="#000080" opacity="0.8"/>
+    <g stroke="#000080" opacity="0.8">
+      <!-- 24 spokes of the Ashoka Chakra -->
+      <line x1="24.5" y1="47" x2="24.5" y2="63" stroke-width="0.5"/>
+      <line x1="16.5" y1="55" x2="32.5" y2="55" stroke-width="0.5"/>
+      <line x1="18.5" y1="49" x2="30.5" y2="61" stroke-width="0.5"/>
+      <line x1="30.5" y1="49" x2="18.5" y2="61" stroke-width="0.5"/>
+    </g>
   </g>
   
-  <g id="tree2" transform="translate(420, 200)">
-    <rect x="-4" y="0" width="8" height="50" fill="#6c757d"/>
-    <circle cx="0" cy="-10" r="20" fill="#20c997"/>
-    <circle cx="12" cy="-2" r="15" fill="#20c997"/>
-    <circle cx="-12" cy="-2" r="15" fill="#20c997"/>
-    <circle cx="0" cy="0" r="15" fill="#20c997"/>
+  <!-- Students in uniform -->
+  <g transform="translate(200, 450)">
+    <!-- Student 1 - Girl in Salwar Kameez uniform -->
+    <g transform="translate(0, 0) scale(0.8)">
+      <!-- Head -->
+      <circle cx="0" cy="-40" r="20" fill="#f5d7b5"/>
+      <!-- Face -->
+      <circle cx="-7" cy="-42" r="3" fill="#333"/>
+      <circle cx="7" cy="-42" r="3" fill="#333"/>
+      <path d="M-5,-32 Q0,-28 5,-32" stroke="#333" stroke-width="2" fill="none"/>
+      <!-- Hair with braids -->
+      <path d="M-20,-50 Q-20,-70 0,-70 Q20,-70 20,-50" fill="#333"/>
+      <path d="M-15,-40 L-15,-10" stroke="#333" stroke-width="4"/>
+      <path d="M15,-40 L15,-10" stroke="#333" stroke-width="4"/>
+      <!-- Salwar Kameez -->
+      <rect x="-20" y="-20" width="40" height="60" fill="#FF9933" rx="10"/>
+      <polygon points="-20,40 -30,80 30,80 20,40" fill="#FF9933"/>
+      <!-- Dupatta (scarf) -->
+      <path d="M-20,-15 C-30,-30 30,-30 20,-15" fill="#FFFFFF" stroke="#FF9933" stroke-width="1"/>
+      <!-- Arms -->
+      <line x1="-20" y1="0" x2="-40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="0" x2="40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Legs -->
+      <line x1="-15" y1="80" x2="-15" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="15" y1="80" x2="15" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Shoes -->
+      <ellipse cx="-15" cy="114" rx="10" ry="5" fill="#333"/>
+      <ellipse cx="15" cy="114" rx="10" ry="5" fill="#333"/>
+      <!-- School bag -->
+      <rect x="25" y="0" width="20" height="30" fill="#0066CC" rx="3"/>
+    </g>
+    
+    <!-- Student 2 - Boy in uniform -->
+    <g transform="translate(100, 10) scale(0.8)">
+      <!-- Head -->
+      <circle cx="0" cy="-40" r="20" fill="#f5d7b5"/>
+      <!-- Face -->
+      <circle cx="-7" cy="-42" r="3" fill="#333"/>
+      <circle cx="7" cy="-42" r="3" fill="#333"/>
+      <path d="M-5,-32 Q0,-28 5,-32" stroke="#333" stroke-width="2" fill="none"/>
+      <!-- Hair -->
+      <path d="M-20,-50 Q-20,-65 0,-65 Q20,-65 20,-50" fill="#333"/>
+      <!-- White Shirt -->
+      <rect x="-20" y="-20" width="40" height="50" fill="#FFFFFF" rx="10"/>
+      <!-- Blue Pants -->
+      <rect x="-20" y="30" width="40" height="50" fill="#000080"/>
+      <!-- Arms -->
+      <line x1="-20" y1="0" x2="-40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="0" x2="40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Legs -->
+      <line x1="-10" y1="80" x2="-10" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="10" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Shoes -->
+      <ellipse cx="-10" cy="114" rx="10" ry="5" fill="#333"/>
+      <ellipse cx="10" cy="114" rx="10" ry="5" fill="#333"/>
+      <!-- School bag -->
+      <rect x="-40" y="0" width="20" height="30" fill="#FF9933" rx="3"/>
+    </g>
+    
+    <!-- Student 3 - Girl with different uniform -->
+    <g transform="translate(200, 0) scale(0.75)">
+      <!-- Head -->
+      <circle cx="0" cy="-40" r="20" fill="#f5d7b5"/>
+      <!-- Face -->
+      <circle cx="-7" cy="-42" r="3" fill="#333"/>
+      <circle cx="7" cy="-42" r="3" fill="#333"/>
+      <path d="M-5,-32 Q0,-28 5,-32" stroke="#333" stroke-width="2" fill="none"/>
+      <!-- Hair with ribbon -->
+      <path d="M-20,-50 Q-20,-70 0,-70 Q20,-70 20,-50" fill="#333"/>
+      <rect x="-5" y="-75" width="10" height="10" fill="#FF5733"/>
+      <!-- Uniform - kurta -->
+      <rect x="-20" y="-20" width="40" height="65" fill="#138808" rx="10"/>
+      <polygon points="-20,45 -30,80 30,80 20,45" fill="#FFFFFF"/>
+      <!-- Arms -->
+      <line x1="-20" y1="0" x2="-40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="0" x2="40" y2="20" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Legs -->
+      <line x1="-15" y1="80" x2="-15" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <line x1="15" y1="80" x2="15" y2="110" stroke="#f5d7b5" stroke-width="8" stroke-linecap="round"/>
+      <!-- Shoes -->
+      <ellipse cx="-15" cy="114" rx="10" ry="5" fill="#333"/>
+      <ellipse cx="15" cy="114" rx="10" ry="5" fill="#333"/>
+      <!-- Book in hand -->
+      <rect x="30" y="20" width="20" height="15" fill="#0066CC"/>
+    </g>
   </g>
   
-  <!-- Students -->
-  <!-- Student 1 -->
-  <g transform="translate(120, 240)">
-    <!-- Body -->
-    <circle cx="0" cy="-25" r="8" fill="#ffc107"/> <!-- Head -->
-    <rect x="-5" y="-17" width="10" height="17" fill="#dc3545"/> <!-- Body -->
-    <!-- Arms and legs -->
-    <line x1="-5" y1="-10" x2="-12" y2="-5" stroke="#dc3545" stroke-width="4" stroke-linecap="round"/>
-    <line x1="5" y1="-10" x2="12" y2="-5" stroke="#dc3545" stroke-width="4" stroke-linecap="round"/>
-    <line x1="-3" y1="0" x2="-5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
-    <line x1="3" y1="0" x2="5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
-    <!-- Book -->
-    <rect x="8" y="-5" width="8" height="12" fill="#0d6efd" transform="rotate(10, 12, 1)"/>
+  <!-- Traditional Banyan Tree -->
+  <g transform="translate(120, 320)">
+    <!-- Trunk -->
+    <path d="M-20,80 C-30,40 30,40 20,80" fill="#8b4513"/>
+    <!-- Aerial roots -->
+    <path d="M-15,30 C-15,60 -15,80 -15,100" stroke="#8b4513" stroke-width="3" fill="none"/>
+    <path d="M0,25 C0,60 0,80 0,100" stroke="#8b4513" stroke-width="3" fill="none"/>
+    <path d="M15,30 C15,60 15,80 15,100" stroke="#8b4513" stroke-width="3" fill="none"/>
+    <!-- Foliage -->
+    <ellipse cx="-40" cy="20" rx="30" ry="20" fill="#006400"/>
+    <ellipse cx="0" cy="10" rx="40" ry="25" fill="#006400"/>
+    <ellipse cx="40" cy="20" rx="30" ry="20" fill="#006400"/>
   </g>
   
-  <!-- Student 2 -->
-  <g transform="translate(380, 245)">
-    <!-- Body -->
-    <circle cx="0" cy="-25" r="8" fill="#f8f9fa"/> <!-- Head -->
-    <rect x="-5" y="-17" width="10" height="17" fill="#0dcaf0"/> <!-- Body -->
-    <!-- Arms and legs -->
-    <line x1="-5" y1="-10" x2="-12" y2="-5" stroke="#0dcaf0" stroke-width="4" stroke-linecap="round"/>
-    <line x1="5" y1="-10" x2="12" y2="-5" stroke="#0dcaf0" stroke-width="4" stroke-linecap="round"/>
-    <line x1="-3" y1="0" x2="-5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
-    <line x1="3" y1="0" x2="5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
-    <!-- Backpack -->
-    <rect x="-10" y="-15" width="8" height="12" fill="#6610f2" rx="2" ry="2"/>
+  <!-- School Bell -->
+  <g transform="translate(570, 350)">
+    <path d="M-5,-10 L5,-10 L5,10 C5,15 -5,15 -5,10 Z" fill="#ffd700"/>
+    <line x1="0" y1="-10" x2="0" y2="-20" stroke="#8b4513" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#8b4513"/>
+    <line x1="0" y1="2" x2="0" y2="8" stroke="#8b4513" stroke-width="1"/>
   </g>
   
-  <!-- Student 3 (entering school) -->
-  <g transform="translate(215, 240)">
-    <!-- Body -->
-    <circle cx="0" cy="-25" r="7" fill="#f8f9fa"/> <!-- Head -->
-    <rect x="-4" y="-18" width="8" height="15" fill="#20c997"/> <!-- Body -->
-    <!-- Arms and legs -->
-    <line x1="-4" y1="-12" x2="-10" y2="-8" stroke="#20c997" stroke-width="3" stroke-linecap="round"/>
-    <line x1="4" y1="-12" x2="10" y2="-8" stroke="#20c997" stroke-width="3" stroke-linecap="round"/>
-    <line x1="-2" y1="-3" x2="-4" y2="7" stroke="#6c757d" stroke-width="3" stroke-linecap="round"/>
-    <line x1="2" y1="-3" x2="4" y2="7" stroke="#6c757d" stroke-width="3" stroke-linecap="round"/>
+  <!-- Kolam/Rangoli pattern at entrance -->
+  <g transform="translate(400, 440)">
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="0" cy="0" r="5" fill="#FF9933"/>
+    
+    <!-- Kolam dots and lines -->
+    <g fill="#FFFFFF">
+      <circle cx="0" cy="-25" r="2"/>
+      <circle cx="25" cy="0" r="2"/>
+      <circle cx="0" cy="25" r="2"/>
+      <circle cx="-25" cy="0" r="2"/>
+      
+      <circle cx="17.7" cy="-17.7" r="2"/>
+      <circle cx="17.7" cy="17.7" r="2"/>
+      <circle cx="-17.7" cy="17.7" r="2"/>
+      <circle cx="-17.7" cy="-17.7" r="2"/>
+    </g>
+    
+    <!-- Decorative lines connecting dots -->
+    <path d="M0,-25 C10,-20 20,-10 25,0" stroke="#FFFFFF" stroke-width="1" fill="none"/>
+    <path d="M25,0 C20,10 10,20 0,25" stroke="#FFFFFF" stroke-width="1" fill="none"/>
+    <path d="M0,25 C-10,20 -20,10 -25,0" stroke="#FFFFFF" stroke-width="1" fill="none"/>
+    <path d="M-25,0 C-20,-10 -10,-20 0,-25" stroke="#FFFFFF" stroke-width="1" fill="none"/>
   </g>
   
-  <!-- Books scattered on ground -->
-  <rect x="350" y="260" width="15" height="20" fill="#dc3545" transform="rotate(-15, 350, 270)"/>
-  <rect x="370" y="265" width="15" height="20" fill="#0d6efd" transform="rotate(10, 375, 270)"/>
-  <rect x="100" y="270" width="15" height="20" fill="#fd7e14" transform="rotate(-5, 100, 280)"/>
+  <!-- Birds in the sky -->
+  <g transform="translate(0, 0)">
+    <path d="M100,150 C110,145 120,150 110,155 C120,160 110,165 100,160 Z" fill="#333"/>
+    <path d="M120,120 C130,115 140,120 130,125 C140,130 130,135 120,130 Z" fill="#333"/>
+    <path d="M700,130 C710,125 720,130 710,135 C720,140 710,145 700,140 Z" fill="#333"/>
+    <path d="M650,170 C660,165 670,170 660,175 C670,180 660,185 650,180 Z" fill="#333"/>
+  </g>
   
-  <!-- Decorative elements -->
-  <circle cx="50" cy="50" r="20" fill="#198754" opacity="0.2"/>
-  <circle cx="450" cy="100" r="15" fill="#198754" opacity="0.2"/>
-  <circle cx="250" cy="30" r="10" fill="#198754" opacity="0.2"/>
-  <circle cx="150" cy="280" r="8" fill="#198754" opacity="0.2"/>
-  <circle cx="400" cy="280" r="5" fill="#198754" opacity="0.2"/>
-  
-  <!-- Sun -->
-  <circle cx="450" cy="50" r="30" fill="#ffc107" opacity="0.3"/>
-  <circle cx="450" cy="50" r="20" fill="#ffc107" opacity="0.5"/>
+  <!-- Sun with decorative rays -->
+  <g transform="translate(700, 100)">
+    <circle cx="0" cy="0" r="30" fill="#FFD700"/>
+    
+    <!-- Sun rays -->
+    <g stroke="#FFD700" stroke-width="3">
+      <line x1="0" y1="-45" x2="0" y2="-75" />
+      <line x1="32" y1="-32" x2="53" y2="-53" />
+      <line x1="45" y1="0" x2="75" y2="0" />
+      <line x1="32" y1="32" x2="53" y2="53" />
+      <line x1="0" y1="45" x2="0" y2="75" />
+      <line x1="-32" y1="32" x2="-53" y2="53" />
+      <line x1="-45" y1="0" x2="-75" y2="0" />
+      <line x1="-32" y1="-32" x2="-53" y2="-53" />
+    </g>
+  </g>
 </svg> 

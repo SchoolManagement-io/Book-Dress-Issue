@@ -28,8 +28,10 @@ session_start();
         /* About page specific styles */
         .about-hero {
             position: relative;
-            padding: 5rem 0;
+            padding: 6rem 0;
             overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
             background-image: url('img/background_pattern.svg');
             background-size: 100px;
         }
@@ -41,8 +43,29 @@ session_start();
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+            background: linear-gradient(135deg, rgba(25, 135, 84, 0.9) 0%, rgba(20, 108, 67, 0.8) 100%);
             z-index: 0;
+        }
+        
+        .about-hero .hero-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        
+        .about-hero .circle-1 {
+            top: -150px;
+            right: -150px;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .about-hero .circle-2 {
+            bottom: -100px;
+            left: -100px;
+            width: 200px;
+            height: 200px;
         }
         
         .about-content {
@@ -452,10 +475,10 @@ session_start();
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" alt="School Inventory" height="40">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="School Inventory" height="40" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -483,14 +506,17 @@ session_start();
     <main>
         <!-- About Hero Section -->
         <section class="about-hero">
+            <div class="hero-bg-circle circle-1"></div>
+            <div class="hero-bg-circle circle-2"></div>
             <div class="container about-content">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h1 class="about-title display-4 fw-bold animate__animated animate__fadeInUp">About Our School Inventory System</h1>
+                        <p class="hindi-text mb-2">हमारे बारे में जानें</p>
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInUp">About Our School Inventory System</h1>
                         <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Our comprehensive platform connects parents and schools to streamline the management of educational supplies, ensuring every student has what they need to succeed.</p>
                         <div class="d-flex flex-wrap gap-2 animate__animated animate__fadeInUp animate__delay-2s">
-                            <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
-                            <a href="#contact" class="btn btn-outline-primary btn-lg">Contact Us</a>
+                            <a href="#features" class="btn btn-light btn-lg">Explore Features</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-lg-6 animate__animated animate__fadeInRight animate__delay-1s">
@@ -498,30 +524,47 @@ session_start();
                     </div>
                 </div>
             </div>
-            
-            <!-- Floating background elements -->
-            <div class="floating-background" data-effect-type="shapes" data-count="10"></div>
         </section>
 
         <!-- Stats Section -->
-        <section class="py-5 bg-light">
+        <section class="stats-section">
             <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-3 col-6 mb-4 mb-md-0">
-                        <div class="stat-counter" data-target="25">0</div>
-                        <p class="mb-0 text-uppercase fw-bold small">Schools</p>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4 mb-md-0">
-                        <div class="stat-counter" data-target="5000">0</div>
-                        <p class="mb-0 text-uppercase fw-bold small">Happy Parents</p>
+                <div class="row g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stats-card">
+                            <div class="stats-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="counter-value" data-target="1250">0</div>
+                            <div class="counter-label">Schools Empowered</div>
+                        </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="stat-counter" data-target="10000">0</div>
-                        <p class="mb-0 text-uppercase fw-bold small">Products</p>
+                        <div class="stats-card">
+                            <div class="stats-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="counter-value" data-target="75000">0</div>
+                            <div class="counter-label">Happy Parents</div>
+                        </div>
                     </div>
                     <div class="col-md-3 col-6">
-                        <div class="stat-counter" data-target="99">0</div>
-                        <p class="mb-0 text-uppercase fw-bold small">Satisfaction Rate %</p>
+                        <div class="stats-card">
+                            <div class="stats-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="counter-value" data-target="125000" data-prefix="">0</div>
+                            <div class="counter-label">Items Managed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stats-card">
+                            <div class="stats-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="counter-value" data-target="28">0</div>
+                            <div class="counter-label">States & Territories</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -821,68 +864,71 @@ session_start();
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- Font Awesome JS (if needed) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     
+    <!-- Custom JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Stats counter animation
-            const counters = document.querySelectorAll('.stat-counter');
+            // Counter Animation
+            const counters = document.querySelectorAll('.counter-value');
             
-            counters.forEach(counter => {
+            function animateCounter(counter) {
                 const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000; // Animation duration in milliseconds
-                const step = target / (duration / 50); // Update every 50ms
+                const prefix = counter.getAttribute('data-prefix') || '';
+                const duration = 2000; // milliseconds
+                const start = 0;
+                const increment = target / (duration / 16);
                 let current = 0;
                 
                 const updateCounter = () => {
-                    current += step;
+                    current += increment;
                     if (current < target) {
-                        counter.textContent = Math.ceil(current);
-                        setTimeout(updateCounter, 50);
+                        counter.textContent = prefix + Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
                     } else {
-                        counter.textContent = target;
+                        counter.textContent = prefix + target.toLocaleString();
                     }
                 };
                 
-                // Start animation when element is in viewport
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            updateCounter();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-                
+                updateCounter();
+            }
+            
+            // Intersection Observer to trigger counters when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+            
+            counters.forEach(counter => {
                 observer.observe(counter);
             });
             
-            // Animate elements when they come into view
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.animate-fade-in-up');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementPosition < windowHeight - 50) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
+            // Feature cards animation on scroll
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate-fade-in-up');
+                        }, index * 100);
+                        cardObserver.unobserve(entry.target);
                     }
                 });
-            };
-            
-            // Set initial state for animation
-            document.querySelectorAll('.animate-fade-in-up').forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'all 0.5s ease-out';
+            }, {
+                threshold: 0.1
             });
             
-            // Listen for scroll events
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Run once on page load
+            featureCards.forEach(card => {
+                cardObserver.observe(card);
+            });
         });
     </script>
 </body>
