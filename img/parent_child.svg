@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="50" cy="50" r="40" fill="#198754" opacity="0.1"/>
+  <circle cx="350" cy="250" r="30" fill="#198754" opacity="0.1"/>
+  <circle cx="320" cy="70" r="20" fill="#198754" opacity="0.15"/>
+  <circle cx="100" cy="270" r="25" fill="#198754" opacity="0.05"/>
+  
+  <!-- Parent (taller figure) -->
+  <g id="parent">
+    <!-- Head -->
+    <circle cx="140" cy="100" r="25" fill="#ffc107"/>
+    
+    <!-- Hair -->
+    <path d="M120,85 Q140,65 160,85" stroke="#6c757d" stroke-width="10" fill="none"/>
+    
+    <!-- Body -->
+    <rect x="125" y="125" width="30" height="70" rx="10" fill="#0dcaf0"/>
+    
+    <!-- Arms -->
+    <line x1="125" y1="140" x2="90" y2="160" stroke="#0dcaf0" stroke-width="10" stroke-linecap="round"/>
+    <line x1="155" y1="140" x2="170" y2="150" stroke="#0dcaf0" stroke-width="10" stroke-linecap="round"/>
+    <line x1="170" y1="150" x2="195" y2="140" stroke="#0dcaf0" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <line x1="130" y1="195" x2="120" y2="250" stroke="#6c757d" stroke-width="12" stroke-linecap="round"/>
+    <line x1="150" y1="195" x2="160" y2="250" stroke="#6c757d" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Facial features -->
+    <circle cx="130" cy="95" r="3" fill="#212529"/>
+    <circle cx="150" cy="95" r="3" fill="#212529"/>
+    <path d="M130,110 Q140,120 150,110" stroke="#212529" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Child (smaller figure) -->
+  <g id="child">
+    <!-- Head -->
+    <circle cx="240" cy="130" r="20" fill="#ffc107"/>
+    
+    <!-- Body -->
+    <rect x="230" y="150" width="20" height="50" rx="8" fill="#dc3545"/>
+    
+    <!-- Arms -->
+    <line x1="230" y1="160" x2="195" y2="140" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/>
+    <line x1="250" y1="160" x2="270" y2="170" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <line x1="235" y1="200" x2="225" y2="240" stroke="#6c757d" stroke-width="8" stroke-linecap="round"/>
+    <line x1="245" y1="200" x2="255" y2="240" stroke="#6c757d" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Facial features -->
+    <circle cx="233" cy="125" r="2.5" fill="#212529"/>
+    <circle cx="247" cy="125" r="2.5" fill="#212529"/>
+    <path d="M233,138 Q240,145 247,138" stroke="#212529" stroke-width="2" fill="none"/>
+    
+    <!-- School hat -->
+    <path d="M220,115 L260,115 L240,100 Z" fill="#6c757d"/>
+    <rect x="238" y="100" width="4" height="5" fill="#6c757d"/>
+  </g>
+  
+  <!-- School Supplies -->
+  <!-- Backpack -->
+  <g id="backpack">
+    <rect x="270" y="170" width="30" height="40" rx="5" fill="#6610f2"/>
+    <rect x="275" y="160" width="20" height="10" rx="2" fill="#6610f2"/>
+    <rect x="280" y="155" width="10" height="5" fill="#6610f2"/>
+    <rect x="275" y="170" width="20" height="5" fill="#563d7c"/>
+    <rect x="280" y="180" width="10" height="10" rx="2" fill="#563d7c"/>
+  </g>
+  
+  <!-- Books -->
+  <g id="books">
+    <rect x="70" y="170" width="30" height="25" fill="#0d6efd" transform="rotate(-10, 85, 183)"/>
+    <rect x="65" y="165" width="30" height="5" fill="#0043ce" transform="rotate(-10, 80, 168)"/>
+    
+    <rect x="75" y="150" width="25" height="20" fill="#dc3545" transform="rotate(-15, 87, 160)"/>
+    <rect x="70" y="145" width="25" height="5" fill="#b02a37" transform="rotate(-15, 82, 152)"/>
+    
+    <rect x="85" y="135" width="20" height="15" fill="#198754" transform="rotate(-5, 95, 142)"/>
+    <rect x="83" y="132" width="20" height="3" fill="#156a43" transform="rotate(-5, 93, 139)"/>
+  </g>
+  
+  <!-- School Supplies scattered around -->
+  <!-- Pencil -->
+  <line x1="310" y1="220" x2="350" y2="200" stroke="#ffc107" stroke-width="3" stroke-linecap="round"/>
+  <line x1="350" y1="200" x2="355" y2="197" stroke="#212529" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Ruler -->
+  <rect x="320" y="230" width="40" height="8" fill="#6c757d"/>
+  <line x1="325" y1="230" x2="325" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="330" y1="230" x2="330" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="335" y1="230" x2="335" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="340" y1="230" x2="340" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="345" y1="230" x2="345" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="350" y1="230" x2="350" y2="238" stroke="#212529" stroke-width="1"/>
+  <line x1="355" y1="230" x2="355" y2="238" stroke="#212529" stroke-width="1"/>
+  
+  <!-- Notebook -->
+  <rect x="50" y="210" width="35" height="45" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="60" y1="210" x2="60" y2="255" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="50" y1="220" x2="85" y2="220" stroke="#adb5bd" stroke-width="0.5"/>
+  <line x1="50" y1="230" x2="85" y2="230" stroke="#adb5bd" stroke-width="0.5"/>
+  <line x1="50" y1="240" x2="85" y2="240" stroke="#adb5bd" stroke-width="0.5"/>
+  
+  <!-- Apple -->
+  <circle cx="300" y="150" r="12" fill="#dc3545"/>
+  <line x1="300" y1="138" x2="305" y2="130" stroke="#198754" stroke-width="2"/>
+  <path d="M304,130 Q308,128 312,132" stroke="#198754" stroke-width="2" fill="none"/>
+  
+  <!-- Speech Bubbles -->
+  <g id="parent_speech">
+    <path d="M180,70 Q200,60 220,70 Q240,80 220,90 Q200,100 180,90 Q160,80 180,70 Z" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+    <text x="200" y="85" font-family="'Poppins', sans-serif" font-size="8" text-anchor="middle" fill="#212529">Let's get your</text>
+    <text x="200" y="95" font-family="'Poppins', sans-serif" font-size="8" text-anchor="middle" fill="#212529">school supplies!</text>
+  </g>
+  
+  <g id="child_speech">
+    <path d="M260,100 Q275,90 290,100 Q305,110 290,120 Q275,130 260,120 Q245,110 260,100 Z" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+    <text x="275" y="110" font-family="'Poppins', sans-serif" font-size="8" text-anchor="middle" fill="#212529">I need</text>
+    <text x="275" y="120" font-family="'Poppins', sans-serif" font-size="8" text-anchor="middle" fill="#212529">books!</text>
+  </g>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="260" rx="150" ry="10" fill="#dee2e6"/>
+</svg> 

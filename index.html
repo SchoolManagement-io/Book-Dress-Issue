@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Inventory Management System</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 6rem 0;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-image {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .features-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .feature-card {
+            height: 100%;
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card-body {
+            padding: 2rem;
+        }
+        
+        .cta-section {
+            background-color: var(--gray-100);
+            padding: 5rem 0;
+            margin: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-decoration {
+            position: absolute;
+            opacity: 0.1;
+        }
+        
+        .decoration-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+        
+        .decoration-2 {
+            bottom: 10%;
+            right: 5%;
+            transform: rotate(15deg);
+        }
+        
+        .testimonial-section {
+            padding: 5rem 0;
+        }
+        
+        .testimonial-card {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slideshow-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slideshow-slide.active {
+            opacity: 1;
+        }
+        
+        .slideshow-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+        }
+        
+        .slideshow-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 10;
+        }
+        
+        .slideshow-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .slideshow-dot.active {
+            background-color: white;
+        }
+        
+        /* Animation for SVG elements */
+        .svg-animate {
+            transition: all 0.5s ease;
+        }
+        
+        .svg-animate:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Login options section */
+        .login-options {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .login-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .login-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .login-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .login-card-body {
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.svg" alt="School Inventory" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="parent_login.php">Parent Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="school_login.php">School Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-circle circle-1"></div>
+        <div class="hero-bg-circle circle-2"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">School Inventory Management Made Simple</h1>
+                    <p class="lead mb-4">Effortlessly manage school supplies, track inventory, and process parent orders - all in one place.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="school_login.php" class="btn btn-light btn-lg px-4 me-md-2">School Login</a>
+                        <a href="parent_login.php" class="btn btn-outline-light btn-lg px-4">Parent Portal</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 hero-image">
+                    <img src="img/school_illustration.svg" alt="School Inventory Management" class="img-fluid svg-animate">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Options -->
+    <section class="login-options">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Choose Your Login Portal</h2>
+                <p class="lead">Access the system based on your role</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="login-card">
+                        <div class="login-card-header">
+                            <div class="login-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <h3>Parent Portal</h3>
+                            <p class="mb-0">Order school supplies for your child</p>
+                        </div>
+                        <div class="login-card-body">
+                            <p>Access the parent portal to order books, uniforms, and other school supplies for your child.</p>
+                            <a href="parent_login.php" class="btn btn-primary btn-lg">Parent Login</a>
+                            <p class="mt-3 mb-0 small">New parent? <a href="parent_register.php">Register here</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="login-card">
+                        <div class="login-card-header">
+                            <div class="login-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h3>School Dashboard</h3>
+                            <p class="mb-0">Manage inventory and orders</p>
+                        </div>
+                        <div class="login-card-body">
+                            <p>School administrators can manage inventory, track stock levels, and process parent orders.</p>
+                            <a href="school_login.php" class="btn btn-primary btn-lg">School Login</a>
+                            <p class="mt-3 mb-0 small">Need help? <a href="contact.php">Contact support</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Key Features</h2>
+            <p class="lead">Discover how our system simplifies school inventory management</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="feature-card-body">
+                        <div class="features-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Inventory Tracking</h3>
+                        <p>Keep track of all school supplies including books, uniforms, and stationery with real-time updates on stock levels.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="feature-card-body">
+                        <div class="features-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Easy Ordering</h3>
+                        <p>Parents can easily browse available items and place orders for their children's school supplies through a user-friendly interface.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="feature-card-body">
+                        <div class="features-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics &amp; Reports</h3>
+                        <p>Generate comprehensive reports on inventory levels, order history, and popular items to make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="slideshow-container">
+                    <div class="slideshow-slide active" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="slideshow-caption">
+                            <h4>Modern Inventory Management</h4>
+                            <p>Streamline school supply operations with our digital solution</p>
+                        </div>
+                    </div>
+                    <div class="slideshow-slide" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="slideshow-caption">
+                            <h4>Parent-Friendly Ordering</h4>
+                            <p>Simple interface for parents to order supplies for their children</p>
+                        </div>
+                    </div>
+                    <div class="slideshow-slide" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="slideshow-caption">
+                            <h4>Efficient School Operations</h4>
+                            <p>Reduce administrative burden with automated inventory tracking</p>
+                        </div>
+                    </div>
+                    <div class="slideshow-dots">
+                        <div class="slideshow-dot active" data-slide="0"></div>
+                        <div class="slideshow-dot" data-slide="1"></div>
+                        <div class="slideshow-dot" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <h2 class="fw-bold mb-4">Streamline Your School Supply Management</h2>
+                <p class="lead">Our inventory management system helps schools efficiently manage their supply chain while making it easy for parents to order what their children need.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Reduced administrative workload for school staff</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Transparent ordering process for parents</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Minimized overstock and stockout situations</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Comprehensive reporting and analytics</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> User-friendly interface for all stakeholders</li>
+                </ul>
+                <a href="about.php" class="btn btn-primary mt-3">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-decoration decoration-1">
+            <img src="img/parent_child.svg" alt="Parent and Child" width="150" class="svg-animate">
+        </div>
+        <div class="cta-decoration decoration-2">
+            <img src="img/inventory.svg" alt="Inventory" width="150" class="svg-animate">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8">
+                    <h2 class="fw-bold mb-4">Ready to Simplify School Inventory Management?</h2>
+                    <p class="lead mb-4">Join schools across the country in streamlining their inventory process and improving parent satisfaction.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="school_login.php" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
+                        <a href="contact.php" class="btn btn-outline-primary btn-lg px-4">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+            <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Users Say</h2>
+                <p class="lead">Feedback from schools and parents using our system</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p>"This system has transformed how we manage our school supplies. The inventory tracking is precise, and we've reduced waste by over 30%."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="avatar">
+                            <div>
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="mb-0 text-muted">School Administrator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p>"As a parent, I love how easy it is to order school supplies for my children. The interface is intuitive, and delivery is always prompt."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="avatar">
+                            <div>
+                                <h5 class="mb-0">Michael Chen</h5>
+                                <p class="mb-0 text-muted">Parent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p>"The analytics have given us valuable insights into our inventory needs. We've optimized our purchasing and saved on storage costs."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Sharma" class="avatar">
+                            <div>
+                                <h5 class="mb-0">Priya Sharma</h5>
+                                <p class="mb-0 text-muted">School Principal</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-md-4 text-md-start">
+                    <img src="img/logo.svg" alt="School Inventory" height="40" class="mb-3">
+                    <p class="mb-0">Simplifying inventory management for schools and parents since 2023.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="parent_login.php">Parent Login</a></li>
+                        <li><a href="school_login.php">School Login</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Contact</h5>
+                    <p class="mb-0">Email: support@schoolinventory.com</p>
+                    <p class="mb-0">Phone: +91-123-456-7890</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="background-color: rgba(255,255,255,0.2);">
+            <p class="mb-0">© 2025 School Inventory Management System | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Slideshow functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slideshow-slide');
+            const dots = document.querySelectorAll('.slideshow-dot');
+            let currentSlide = 0;
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+            
+            // Add click event to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    
+                    slides[currentSlide].classList.remove('active');
+                    dots[currentSlide].classList.remove('active');
+                    
+                    currentSlide = index;
+                    
+                    slides[currentSlide].classList.add('active');
+                    dots[currentSlide].classList.add('active');
+                    
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

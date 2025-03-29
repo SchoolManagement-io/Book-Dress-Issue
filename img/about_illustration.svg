@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="450" cy="50" r="30" fill="#198754" opacity="0.1"/>
+  <circle cx="50" cy="270" r="25" fill="#198754" opacity="0.1"/>
+  <circle cx="250" cy="30" r="15" fill="#198754" opacity="0.15"/>
+  
+  <!-- Office/Classroom Environment -->
+  <rect x="70" y="150" width="360" height="120" fill="#e9ecef" rx="5" ry="5" />
+  <rect x="70" y="150" width="360" height="20" fill="#adb5bd" rx="5" ry="5" />
+  
+  <!-- Table -->
+  <rect x="100" y="180" width="300" height="10" fill="#6c757d"/>
+  <rect x="100" y="190" width="300" height="60" fill="#dee2e6"/>
+  
+  <!-- Books and materials on table -->
+  <rect x="120" y="175" width="40" height="15" fill="#0d6efd"/>
+  <rect x="170" y="175" width="35" height="15" fill="#dc3545"/>
+  <rect x="215" y="175" width="30" height="15" fill="#ffc107"/>
+  <rect x="340" y="175" width="40" height="15" fill="#198754"/>
+  
+  <!-- Computer screen -->
+  <rect x="260" y="175" width="60" height="40" fill="#212529" rx="3" ry="3"/>
+  <rect x="265" y="180" width="50" height="30" fill="#f8f9fa" rx="1" ry="1"/>
+  <line x1="270" y1="185" x2="310" y2="185" stroke="#198754" stroke-width="2"/>
+  <line x1="270" y1="190" x2="295" y2="190" stroke="#198754" stroke-width="2"/>
+  <line x1="270" y1="195" x2="305" y2="195" stroke="#198754" stroke-width="2"/>
+  <line x1="270" y1="200" x2="290" y2="200" stroke="#198754" stroke-width="2"/>
+  
+  <!-- Person 1 (seated left) -->
+  <circle cx="140" cy="230" r="20" fill="#6610f2" opacity="0.8"/> <!-- head -->
+  <rect x="130" y="250" width="20" height="30" fill="#6610f2" opacity="0.8" rx="5" ry="5"/> <!-- body -->
+  <rect x="125" y="250" width="5" height="25" fill="#6610f2" opacity="0.8" rx="2" ry="2"/> <!-- left arm -->
+  <rect x="150" y="250" width="5" height="15" fill="#6610f2" opacity="0.8" rx="2" ry="2"/> <!-- right arm -->
+  <rect x="150" y="250" width="15" height="5" fill="#6610f2" opacity="0.8" rx="2" ry="2"/> <!-- right arm extending -->
+  
+  <!-- Person 2 (seated middle) -->
+  <circle cx="250" cy="230" r="20" fill="#dc3545" opacity="0.8"/> <!-- head -->
+  <rect x="240" y="250" width="20" height="30" fill="#dc3545" opacity="0.8" rx="5" ry="5"/> <!-- body -->
+  <rect x="235" y="250" width="5" height="20" fill="#dc3545" opacity="0.8" rx="2" ry="2"/> <!-- left arm -->
+  <rect x="260" y="250" width="5" height="20" fill="#dc3545" opacity="0.8" rx="2" ry="2"/> <!-- right arm -->
+  
+  <!-- Person 3 (seated right) -->
+  <circle cx="350" cy="230" r="20" fill="#198754" opacity="0.8"/> <!-- head -->
+  <rect x="340" y="250" width="20" height="30" fill="#198754" opacity="0.8" rx="5" ry="5"/> <!-- body -->
+  <rect x="335" y="250" width="5" height="15" fill="#198754" opacity="0.8" rx="2" ry="2"/> <!-- left arm -->
+  <rect x="335" y="265" width="15" height="5" fill="#198754" opacity="0.8" rx="2" ry="2"/> <!-- left arm extending -->
+  <rect x="360" y="250" width="5" height="25" fill="#198754" opacity="0.8" rx="2" ry="2"/> <!-- right arm -->
+  
+  <!-- Thought bubbles and education icons -->
+  <!-- Person 1 thought bubble -->
+  <circle cx="110" cy="190" r="15" fill="white" stroke="#6c757d" stroke-width="1"/>
+  <circle cx="95" cy="175" r="10" fill="white" stroke="#6c757d" stroke-width="1"/>
+  <circle cx="85" cy="160" r="6" fill="white" stroke="#6c757d" stroke-width="1"/>
+  
+  <!-- Book icon in thought bubble -->
+  <rect x="105" y="185" width="10" height="12" fill="#0d6efd" rx="1" ry="1"/>
+  <line x1="105" y1="190" x2="115" y2="190" stroke="white" stroke-width="1"/>
+  
+  <!-- Person 3 thought bubble -->
+  <circle cx="380" cy="190" r="15" fill="white" stroke="#6c757d" stroke-width="1"/>
+  <circle cx="395" cy="175" r="10" fill="white" stroke="#6c757d" stroke-width="1"/>
+  <circle cx="405" cy="160" r="6" fill="white" stroke="#6c757d" stroke-width="1"/>
+  
+  <!-- Chart icon in thought bubble -->
+  <rect x="375" y="185" width="10" height="10" fill="#198754" rx="1" ry="1"/>
+  <polyline points="375,195 380,190 385,193 390,185" stroke="white" stroke-width="1" fill="none"/>
+  
+  <!-- Educational elements floating above -->
+  <!-- Pencil -->
+  <line x1="160" y1="80" x2="200" y2="120" stroke="#ffc107" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="155,75 160,65 170,75 165,85" fill="#dc3545"/>
+  <line x1="200" y1="120" x2="205" y2="125" stroke="#6c757d" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Calculator -->
+  <rect x="300" y="70" width="40" height="50" fill="#212529" rx="3" ry="3"/>
+  <rect x="305" y="75" width="30" height="15" fill="#e9ecef" rx="1" ry="1"/>
+  <circle cx="310" cy="100" r="3" fill="#f8f9fa"/>
+  <circle cx="320" cy="100" r="3" fill="#f8f9fa"/>
+  <circle cx="330" cy="100" r="3" fill="#f8f9fa"/>
+  <circle cx="310" cy="110" r="3" fill="#f8f9fa"/>
+  <circle cx="320" cy="110" r="3" fill="#f8f9fa"/>
+  <circle cx="330" cy="110" r="3" fill="#f8f9fa"/>
+  
+  <!-- Notebook -->
+  <rect x="230" y="85" width="40" height="50" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="230" y1="95" x2="270" y2="95" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="230" y1="105" x2="270" y2="105" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="230" y1="115" x2="270" y2="115" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="230" y1="125" x2="270" y2="125" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="250" y1="85" x2="250" y2="135" stroke="#adb5bd" stroke-width="1"/>
+  
+  <!-- Title text -->
+  <text x="250" y="40" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#198754" font-weight="bold">Our Team at Work</text>
+  
+  <!-- Interactive hover zones -->
+  <g id="hover_zones" opacity="0">
+    <circle cx="140" cy="230" r="30" fill="#6610f2" opacity="0.2" class="hover-zone" data-person="teacher"/>
+    <circle cx="250" cy="230" r="30" fill="#dc3545" opacity="0.2" class="hover-zone" data-person="administrator"/>
+    <circle cx="350" cy="230" r="30" fill="#198754" opacity="0.2" class="hover-zone" data-person="inventory-manager"/>
+  </g>
+  
+  <!-- Labels that appear on hover -->
+  <g id="hover_labels" opacity="0">
+    <rect x="110" y="190" width="60" height="20" fill="white" rx="3" ry="3" class="label" data-for="teacher"/>
+    <text x="140" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#6610f2" class="label-text" data-for="teacher">Teacher</text>
+    
+    <rect x="220" y="190" width="60" height="20" fill="white" rx="3" ry="3" class="label" data-for="administrator"/>
+    <text x="250" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#dc3545" class="label-text" data-for="administrator">Administrator</text>
+    
+    <rect x="305" y="190" width="90" height="20" fill="white" rx="3" ry="3" class="label" data-for="inventory-manager"/>
+    <text x="350" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#198754" class="label-text" data-for="inventory-manager">Inventory Manager</text>
+  </g>
+</svg> 

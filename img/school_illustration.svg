@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="250" width="500" height="50" fill="#e9ecef" rx="0" ry="0"/>
+  <path d="M0,250 C100,240 200,260 300,245 C400,230 500,250 500,250 L500,300 L0,300 Z" fill="#dee2e6"/>
+  
+  <!-- Sky with subtle clouds -->
+  <circle cx="100" cy="80" r="30" fill="#e9ecef" opacity="0.5"/>
+  <circle cx="80" cy="80" r="25" fill="#e9ecef" opacity="0.5"/>
+  <circle cx="120" cy="80" r="25" fill="#e9ecef" opacity="0.5"/>
+  
+  <circle cx="400" cy="50" r="20" fill="#e9ecef" opacity="0.5"/>
+  <circle cx="385" cy="50" r="15" fill="#e9ecef" opacity="0.5"/>
+  <circle cx="415" cy="50" r="15" fill="#e9ecef" opacity="0.5"/>
+  
+  <!-- School Building -->
+  <g id="school_building">
+    <!-- Main building -->
+    <rect x="150" y="100" width="200" height="150" fill="#ffffff" stroke="#6c757d" stroke-width="2"/>
+    <rect x="140" y="90" width="220" height="20" fill="#198754" stroke="#156a43" stroke-width="2"/>
+    
+    <!-- Roof -->
+    <polygon points="130,90 250,50 370,90" fill="#198754" stroke="#156a43" stroke-width="2"/>
+    
+    <!-- School sign -->
+    <rect x="220" y="70" width="60" height="15" fill="#ffffff" stroke="#6c757d" stroke-width="1"/>
+    <text x="250" y="82" font-family="'Poppins', sans-serif" font-size="10" text-anchor="middle" fill="#198754">SCHOOL</text>
+    
+    <!-- Door -->
+    <rect x="230" y="180" width="40" height="70" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+    <rect x="245" y="180" width="10" height="70" fill="#495057"/>
+    <circle cx="240" cy="215" r="3" fill="#ffc107"/> <!-- Door knob -->
+    
+    <!-- Steps -->
+    <rect x="220" y="250" width="60" height="5" fill="#adb5bd"/>
+    <rect x="225" y="255" width="50" height="5" fill="#adb5bd"/>
+    <rect x="230" y="260" width="40" height="5" fill="#adb5bd"/>
+    
+    <!-- Windows (Left side) -->
+    <rect x="170" y="120" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
+    <line x1="185" y1="120" x2="185" y2="150" stroke="#6c757d" stroke-width="1"/>
+    <line x1="170" y1="135" x2="200" y2="135" stroke="#6c757d" stroke-width="1"/>
+    
+    <rect x="170" y="170" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
+    <line x1="185" y1="170" x2="185" y2="200" stroke="#6c757d" stroke-width="1"/>
+    <line x1="170" y1="185" x2="200" y2="185" stroke="#6c757d" stroke-width="1"/>
+    
+    <!-- Windows (Right side) -->
+    <rect x="300" y="120" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
+    <line x1="315" y1="120" x2="315" y2="150" stroke="#6c757d" stroke-width="1"/>
+    <line x1="300" y1="135" x2="330" y2="135" stroke="#6c757d" stroke-width="1"/>
+    
+    <rect x="300" y="170" width="30" height="30" fill="#e7f5ff" stroke="#6c757d" stroke-width="1"/>
+    <line x1="315" y1="170" x2="315" y2="200" stroke="#6c757d" stroke-width="1"/>
+    <line x1="300" y1="185" x2="330" y2="185" stroke="#6c757d" stroke-width="1"/>
+    
+    <!-- Flag pole -->
+    <line x1="370" y1="50" x2="370" y2="120" stroke="#495057" stroke-width="1.5"/>
+    <rect x="370" y="50" width="20" height="15" fill="#dc3545"/>
+  </g>
+  
+  <!-- Trees -->
+  <g id="tree1" transform="translate(80, 180)">
+    <rect x="-5" y="0" width="10" height="70" fill="#6c757d"/>
+    <circle cx="0" cy="-15" r="25" fill="#198754"/>
+    <circle cx="15" cy="-5" r="20" fill="#198754"/>
+    <circle cx="-15" cy="-5" r="20" fill="#198754"/>
+    <circle cx="0" cy="0" r="20" fill="#198754"/>
+  </g>
+  
+  <g id="tree2" transform="translate(420, 200)">
+    <rect x="-4" y="0" width="8" height="50" fill="#6c757d"/>
+    <circle cx="0" cy="-10" r="20" fill="#20c997"/>
+    <circle cx="12" cy="-2" r="15" fill="#20c997"/>
+    <circle cx="-12" cy="-2" r="15" fill="#20c997"/>
+    <circle cx="0" cy="0" r="15" fill="#20c997"/>
+  </g>
+  
+  <!-- Students -->
+  <!-- Student 1 -->
+  <g transform="translate(120, 240)">
+    <!-- Body -->
+    <circle cx="0" cy="-25" r="8" fill="#ffc107"/> <!-- Head -->
+    <rect x="-5" y="-17" width="10" height="17" fill="#dc3545"/> <!-- Body -->
+    <!-- Arms and legs -->
+    <line x1="-5" y1="-10" x2="-12" y2="-5" stroke="#dc3545" stroke-width="4" stroke-linecap="round"/>
+    <line x1="5" y1="-10" x2="12" y2="-5" stroke="#dc3545" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-3" y1="0" x2="-5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="3" y1="0" x2="5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
+    <!-- Book -->
+    <rect x="8" y="-5" width="8" height="12" fill="#0d6efd" transform="rotate(10, 12, 1)"/>
+  </g>
+  
+  <!-- Student 2 -->
+  <g transform="translate(380, 245)">
+    <!-- Body -->
+    <circle cx="0" cy="-25" r="8" fill="#f8f9fa"/> <!-- Head -->
+    <rect x="-5" y="-17" width="10" height="17" fill="#0dcaf0"/> <!-- Body -->
+    <!-- Arms and legs -->
+    <line x1="-5" y1="-10" x2="-12" y2="-5" stroke="#0dcaf0" stroke-width="4" stroke-linecap="round"/>
+    <line x1="5" y1="-10" x2="12" y2="-5" stroke="#0dcaf0" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-3" y1="0" x2="-5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="3" y1="0" x2="5" y2="10" stroke="#6c757d" stroke-width="4" stroke-linecap="round"/>
+    <!-- Backpack -->
+    <rect x="-10" y="-15" width="8" height="12" fill="#6610f2" rx="2" ry="2"/>
+  </g>
+  
+  <!-- Student 3 (entering school) -->
+  <g transform="translate(215, 240)">
+    <!-- Body -->
+    <circle cx="0" cy="-25" r="7" fill="#f8f9fa"/> <!-- Head -->
+    <rect x="-4" y="-18" width="8" height="15" fill="#20c997"/> <!-- Body -->
+    <!-- Arms and legs -->
+    <line x1="-4" y1="-12" x2="-10" y2="-8" stroke="#20c997" stroke-width="3" stroke-linecap="round"/>
+    <line x1="4" y1="-12" x2="10" y2="-8" stroke="#20c997" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-2" y1="-3" x2="-4" y2="7" stroke="#6c757d" stroke-width="3" stroke-linecap="round"/>
+    <line x1="2" y1="-3" x2="4" y2="7" stroke="#6c757d" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Books scattered on ground -->
+  <rect x="350" y="260" width="15" height="20" fill="#dc3545" transform="rotate(-15, 350, 270)"/>
+  <rect x="370" y="265" width="15" height="20" fill="#0d6efd" transform="rotate(10, 375, 270)"/>
+  <rect x="100" y="270" width="15" height="20" fill="#fd7e14" transform="rotate(-5, 100, 280)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="20" fill="#198754" opacity="0.2"/>
+  <circle cx="450" cy="100" r="15" fill="#198754" opacity="0.2"/>
+  <circle cx="250" cy="30" r="10" fill="#198754" opacity="0.2"/>
+  <circle cx="150" cy="280" r="8" fill="#198754" opacity="0.2"/>
+  <circle cx="400" cy="280" r="5" fill="#198754" opacity="0.2"/>
+  
+  <!-- Sun -->
+  <circle cx="450" cy="50" r="30" fill="#ffc107" opacity="0.3"/>
+  <circle cx="450" cy="50" r="20" fill="#ffc107" opacity="0.5"/>
+</svg> 

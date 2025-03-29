@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="250" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="40" r="20" fill="#198754" opacity="0.1"/>
+  <circle cx="30" cy="200" r="15" fill="#198754" opacity="0.1"/>
+  <circle cx="200" cy="20" r="10" fill="#198754" opacity="0.15"/>
+  
+  <!-- Central compass design -->
+  <circle cx="200" cy="125" r="80" fill="white" stroke="#6c757d" stroke-width="2"/>
+  <circle cx="200" cy="125" r="75" fill="white" stroke="#adb5bd" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="200" cy="125" r="10" fill="#198754"/>
+  
+  <!-- Compass directions -->
+  <line x1="200" y1="45" x2="200" y2="65" stroke="#198754" stroke-width="3"/>
+  <line x1="200" y1="185" x2="200" y2="205" stroke="#198754" stroke-width="3"/>
+  <line x1="120" y1="125" x2="140" y2="125" stroke="#198754" stroke-width="3"/>
+  <line x1="260" y1="125" x2="280" y2="125" stroke="#198754" stroke-width="3"/>
+  
+  <!-- Direction labels -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#198754">VISION</text>
+  <text x="200" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#198754">EXCELLENCE</text>
+  <text x="110" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" alignment-baseline="middle" fill="#198754">COMMUNITY</text>
+  <text x="290" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="start" alignment-baseline="middle" fill="#198754">INNOVATION</text>
+  
+  <!-- Diagonal compass lines -->
+  <line x1="142" y1="67" x2="158" y2="83" stroke="#198754" stroke-width="2"/>
+  <line x1="142" y1="183" x2="158" y2="167" stroke="#198754" stroke-width="2"/>
+  <line x1="242" y1="183" x2="258" y2="167" stroke="#198754" stroke-width="2"/>
+  <line x1="242" y1="67" x2="258" y2="83" stroke="#198754" stroke-width="2"/>
+  
+  <!-- Education icons around compass -->
+  <!-- Book at top -->
+  <g transform="translate(185, 80) scale(0.7)">
+    <rect x="0" y="0" width="40" height="30" fill="#0d6efd" rx="2" ry="2"/>
+    <rect x="20" y="0" width="2" height="30" fill="#f8f9fa"/>
+    <rect x="5" y="5" width="10" height="2" fill="#f8f9fa"/>
+    <rect x="5" y="10" width="10" height="2" fill="#f8f9fa"/>
+    <rect x="25" y="5" width="10" height="2" fill="#f8f9fa"/>
+    <rect x="25" y="10" width="10" height="2" fill="#f8f9fa"/>
+  </g>
+  
+  <!-- Graduation cap on right -->
+  <g transform="translate(270, 110) scale(0.7)">
+    <rect x="0" y="10" width="30" height="5" fill="#dc3545"/>
+    <polygon points="15,0 30,10 0,10" fill="#dc3545"/>
+    <circle cx="15" cy="5" r="3" fill="#f8f9fa"/>
+    <rect x="13" y="15" width="4" height="10" fill="#dc3545"/>
+    <rect x="10" y="25" width="10" height="2" fill="#dc3545"/>
+  </g>
+  
+  <!-- Light bulb on left -->
+  <g transform="translate(95, 110) scale(0.7)">
+    <circle cx="15" cy="10" r="10" fill="#ffc107"/>
+    <rect x="10" y="20" width="10" height="5" fill="#ffc107" rx="2" ry="2"/>
+    <rect x="12" y="25" width="6" height="3" fill="#ffc107" rx="1" ry="1"/>
+    <path d="M8,10 Q15,20 22,10" stroke="#f8f9fa" stroke-width="1.5" fill="none"/>
+    <line x1="15" y1="0" x2="15" y2="5" stroke="#f8f9fa" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Pencil at bottom -->
+  <g transform="translate(185, 160) scale(0.7)">
+    <polygon points="0,25 40,25 40,20 35,15 5,15 0,20" fill="#6c757d"/>
+    <polygon points="5,15 35,15 35,0 5,0" fill="#ffc107"/>
+    <polygon points="15,0 25,0 25,15 15,15" fill="#f8f9fa" opacity="0.3"/>
+    <polygon points="5,0 10,0 10,15 5,15" fill="#212529" opacity="0.1"/>
+    <polygon points="30,0 35,0 35,15 30,15" fill="#212529" opacity="0.1"/>
+  </g>
+  
+  <!-- Text items -->
+  <text x="200" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#198754">MISSION</text>
+  
+  <!-- Interactive elements - pulsing circle -->
+  <circle cx="200" cy="125" r="60" fill="none" stroke="#198754" stroke-width="2" opacity="0.6">
+    <animate attributeName="r" values="60;65;60" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg> 
