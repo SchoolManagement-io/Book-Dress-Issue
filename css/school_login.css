@@ -1,0 +1,304 @@
+/* School Login CSS with Indian-inspired design */
+:root {
+  --primary-color: #E91E63;
+  --primary-dark: #c2185b;
+  --primary-light: #f8bbd0;
+  --secondary-color: #FF9800;
+  --accent-color: #8E24AA;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --light-bg: #f5f5f5;
+  --border-color: #e0e0e0;
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --danger: #F44336;
+  --info: #2196F3;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Login Form Container */
+.login-form-container {
+  background-color: var(--white);
+  min-height: 100vh;
+  position: relative;
+}
+
+.login-form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/pattern.svg');
+  background-size: 300px;
+  background-attachment: fixed;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.login-form-content {
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Banner Container */
+.login-banner-container {
+  background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.login-banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/pattern.svg');
+  background-size: 400px;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Feature Items */
+.feature-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Form Styling */
+.form-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .input-group-text {
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.input-group > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group > .form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-text {
+  background-color: var(--light-bg);
+  color: var(--text-secondary);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.15);
+  border-color: var(--primary-color);
+}
+
+.invalid-feedback {
+  font-size: 0.8rem;
+}
+
+/* Checkbox styling */
+.form-check-input {
+  width: 1.1em;
+  height: 1.1em;
+  margin-top: 0.2em;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.15);
+  border-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+}
+
+/* Toggle password button */
+.toggle-password {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 5;
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  transition: opacity 0.5s ease;
+}
+
+.alert-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--danger);
+}
+
+.alert-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success);
+}
+
+/* Links styling */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Footer */
+.login-footer {
+  background-color: rgba(250, 250, 250, 0.9);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+  .login-form-container {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  
+  .login-banner-container {
+    min-height: 50vh;
+    padding: 3rem 0;
+  }
+  
+  .feature-item {
+    margin-bottom: 1rem;
+  }
+  
+  .login-footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .login-banner-container {
+    min-height: 40vh;
+  }
+  
+  .feature-item {
+    padding: 1rem;
+  }
+  
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .banner-content {
+    padding: 2rem !important;
+  }
+  
+  .banner-content h2 {
+    font-size: 1.8rem !important;
+  }
+} 

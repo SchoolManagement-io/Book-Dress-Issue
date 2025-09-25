@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="flame-gradient" cx="50%" cy="40%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFFF00" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#FFA500" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF4500" stop-opacity="0.7"/>
+    </radialGradient>
+    
+    <linearGradient id="clay-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CD853F" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#8B4513" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#A0522D" stop-opacity="1"/>
+    </linearGradient>
+    
+    <filter id="flame-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="75" cy="120" rx="40" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Diya Base -->
+  <path d="M35,100 C35,115 115,115 115,100 L105,120 C105,125 45,125 45,120 Z" 
+        fill="url(#clay-gradient)" 
+        stroke="#8B4513" 
+        stroke-width="1"/>
+  
+  <!-- Diya Bowl -->
+  <path d="M35,100 C35,70 115,70 115,100" 
+        fill="url(#clay-gradient)" 
+        stroke="#8B4513" 
+        stroke-width="1"/>
+  
+  <!-- Oil in Diya -->
+  <ellipse cx="75" cy="90" rx="30" ry="10" fill="#FFD700" opacity="0.4"/>
+  
+  <!-- Flame Glow -->
+  <ellipse cx="75" cy="50" rx="15" ry="25" fill="#FFFF00" opacity="0.3" filter="url(#glow)"/>
+  
+  <!-- Wick -->
+  <line x1="75" y1="90" x2="75" y2="70" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Flame -->
+  <path d="M75,70 C80,55 85,40 75,30 C65,40 70,55 75,70 Z" 
+        fill="url(#flame-gradient)" 
+        filter="url(#flame-blur)"/>
+  
+  <!-- Decorative Patterns on Diya -->
+  <path d="M45,105 C50,103 55,102 60,105" fill="none" stroke="#FFA500" stroke-width="1"/>
+  <path d="M65,105 C70,103 75,102 80,105" fill="none" stroke="#FFA500" stroke-width="1"/>
+  <path d="M85,105 C90,103 95,102 100,105" fill="none" stroke="#FFA500" stroke-width="1"/>
+  
+  <!-- Small Decorative Dots -->
+  <circle cx="50" cy="110" r="1" fill="#FFA500"/>
+  <circle cx="60" cy="110" r="1" fill="#FFA500"/>
+  <circle cx="70" cy="110" r="1" fill="#FFA500"/>
+  <circle cx="80" cy="110" r="1" fill="#FFA500"/>
+  <circle cx="90" cy="110" r="1" fill="#FFA500"/>
+  <circle cx="100" cy="110" r="1" fill="#FFA500"/>
+  
+  <!-- Flower decoration -->
+  <g transform="translate(40, 100) scale(0.15)">
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(0)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(72)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(144)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(216)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(288)"/>
+  </g>
+  
+  <g transform="translate(110, 100) scale(0.15)">
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(0)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(72)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(144)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(216)"/>
+    <path d="M0,0 C10,-20 20,-20 0,-40 C-20,-20 -10,-20 0,0" fill="#FF9933" transform="rotate(288)"/>
+  </g>
+</svg> 

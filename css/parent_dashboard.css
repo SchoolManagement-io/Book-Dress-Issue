@@ -1,0 +1,471 @@
+/* Parent Dashboard CSS - Indian-inspired design
+-------------------------------------------------- */
+
+:root {
+  /* Indian-inspired color palette */
+  --primary: #2D7A9C;     /* Deep blue - main color */
+  --primary-light: #4A9FC1; /* Lighter blue for hover states */
+  --primary-dark: #1A5A77;  /* Darker blue */
+  --accent: #E9724C;      /* Terracotta - accent color */
+  --accent-light: #FF8F6B; /* Lighter terracotta */
+  --yellow: #FFC145;      /* Marigold yellow */
+  --green: #138808;       /* India green */
+  --teal: #0AB599;        /* Teal accent */
+  --neutral: #F5F5F5;     /* Light background */
+  --neutral-dark: #E0E0E0; /* Darker background */
+  --text: #333333;        /* Main text color */
+  --white: #FFFFFF;       /* White */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background-color: var(--neutral);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary)) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-brand img {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--white);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 3px;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(45, 122, 156, 0.1);
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: var(--white);
+}
+
+.btn-light:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+.cart-badge {
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Main content */
+.container.py-4 {
+  flex: 1;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.card-header h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.card-header::after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 3px;
+  bottom: -1px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 3px 3px 0 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Student info card */
+.card-title {
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.badge.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.badge.bg-info {
+  background-color: var(--teal) !important;
+  color: var(--white);
+}
+
+/* Category buttons */
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+/* Search bar */
+.input-group {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-group-text {
+  border: none;
+  padding-left: 1rem;
+}
+
+.form-control {
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.btn-outline-secondary {
+  border: none;
+  background-color: var(--white);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--neutral);
+  color: var(--text);
+}
+
+/* Form switch */
+.form-check-input {
+  background-color: var(--neutral-dark);
+  border: none;
+}
+
+.form-check-input:checked {
+  background-color: var(--teal);
+  border-color: var(--teal);
+}
+
+/* Item cards */
+.item-card {
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-card .card-title {
+  min-height: 2.5rem;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.badge.bg-success {
+  background-color: var(--green) !important;
+}
+
+.badge.bg-warning {
+  background-color: var(--yellow) !important;
+  color: var(--text);
+}
+
+.badge.bg-info {
+  background-color: var(--teal) !important;
+}
+
+.badge.bg-danger {
+  background-color: var(--accent) !important;
+}
+
+/* Buttons in items */
+.btn-group .btn {
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Offcanvas cart */
+.offcanvas-header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.25rem 1.5rem;
+}
+
+.offcanvas-title {
+  font-weight: 600;
+}
+
+.btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.cart-item {
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.qty-input {
+  max-width: 50px;
+  text-align: center;
+}
+
+/* Modals */
+.modal-content {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.alert-info {
+  background-color: rgba(10, 181, 153, 0.1);
+  border-color: rgba(10, 181, 153, 0.2);
+  color: #0A7D6C;
+}
+
+.alert {
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.modal-header.bg-success {
+  background: linear-gradient(135deg, var(--green), var(--teal)) !important;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #333, #222) !important;
+  margin-top: auto;
+}
+
+/* Loading overlay */
+#loading-overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 9999;
+}
+
+#loading-overlay .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+  color: var(--white) !important;
+}
+
+/* Decorative elements - Indian-inspired patterns */
+.card-header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url('../assets/paisley.svg');
+  background-size: contain;
+  opacity: 0.05;
+  transform: rotate(45deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: var(--primary-dark);
+    margin: 0 -12px;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-header h5 {
+    font-size: 1.1rem;
+  }
+  
+  .category-btn {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .btn-group .btn {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Indian-inspired spinner for loading states */
+.spinner-border.text-primary {
+  color: var(--primary) !important;
+  border-width: 0.2em;
+  border-right-color: transparent;
+  border-bottom-color: var(--accent);
+  animation: spinner-border 1s linear infinite;
+}
+
+/* Toast styling */
+.toast {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.toast-header {
+  background-color: var(--primary);
+  color: var(--white);
+  border-bottom: none;
+}
+
+.toast-body {
+  padding: 1rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.item-card:hover .card-title {
+  color: var(--primary);
+} 

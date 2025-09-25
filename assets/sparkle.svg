@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  
+  <!-- Small stars -->
+  <g filter="url(#blur)">
+    <!-- Row 1 -->
+    <circle cx="20" cy="20" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="60" cy="15" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="100" cy="25" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="140" cy="10" r="1.4" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="180" cy="20" r="1" fill="#FFFFFF" opacity="0.6"/>
+    
+    <!-- Row 2 -->
+    <circle cx="30" cy="40" r="1" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="70" cy="50" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="110" cy="45" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="150" cy="35" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="190" cy="55" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+    
+    <!-- Row 3 -->
+    <circle cx="10" cy="70" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="50" cy="65" r="1.4" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="90" cy="75" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="130" cy="80" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="170" cy="70" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+  
+  <!-- Medium sparkles -->
+  <g>
+    <!-- Sparkle 1 -->
+    <path d="M25,30 L27,35 L32,37 L27,39 L25,44 L23,39 L18,37 L23,35 Z" fill="#FFFFFF" opacity="0.7"/>
+    
+    <!-- Sparkle 2 -->
+    <path d="M85,25 L87,30 L92,32 L87,34 L85,39 L83,34 L78,32 L83,30 Z" fill="#FFFFFF" opacity="0.6"/>
+    
+    <!-- Sparkle 3 -->
+    <path d="M135,60 L137,65 L142,67 L137,69 L135,74 L133,69 L128,67 L133,65 Z" fill="#FFFFFF" opacity="0.7"/>
+    
+    <!-- Sparkle 4 -->
+    <path d="M175,45 L177,50 L182,52 L177,54 L175,59 L173,54 L168,52 L173,50 Z" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+  
+  <!-- Larger sparkles with gold color -->
+  <g>
+    <!-- Gold Sparkle 1 -->
+    <path d="M45,55 L48,62 L55,65 L48,68 L45,75 L42,68 L35,65 L42,62 Z" fill="#FFD700" opacity="0.5"/>
+    
+    <!-- Gold Sparkle 2 -->
+    <path d="M115,35 L118,42 L125,45 L118,48 L115,55 L112,48 L105,45 L112,42 Z" fill="#FFD700" opacity="0.4"/>
+    
+    <!-- Gold Sparkle 3 -->
+    <path d="M155,75 L158,82 L165,85 L158,88 L155,95 L152,88 L145,85 L152,82 Z" fill="#FFD700" opacity="0.5"/>
+  </g>
+  
+  <!-- Tiny dots for additional sparkle -->
+  <g>
+    <circle cx="35" cy="25" r="0.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="75" cy="35" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="125" cy="15" r="0.7" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="165" cy="25" r="0.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="15" cy="55" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="65" cy="75" r="0.7" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="105" cy="65" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="145" cy="85" r="0.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="185" cy="45" r="0.7" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg> 
